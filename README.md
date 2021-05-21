@@ -1,2 +1,2 @@
-# Udacity_Final_Project
-Capstone Project for Udacity Front End Nanodegree Course
+# Udacity Final Project
+### Capstone Project for Udacity Front End Nanodegree Course
