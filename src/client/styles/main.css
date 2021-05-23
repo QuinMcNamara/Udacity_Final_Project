@@ -26,7 +26,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-#app{
+.app{
     grid-area: app;
     display: grid;
     grid-template-columns: 1fr;
