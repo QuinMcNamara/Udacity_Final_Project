@@ -14,7 +14,7 @@ allData = {};
 const geonamesUsername = process.env.geonames_username;
 const geonamesBaseURL = 'http://api.geonames.org/searchJSON?q=';
 /* For reference, the full URL needed is as follows:
-'http://api.geonames.org/searchJSON?q="user input city here"&maxRows=10&username="geonamesUsername goes here"
+'http://api.geonames.org/searchJSON?q="user input city here"&maxRows=2&username="geonamesUsername goes here"
 User Input City will be pulled from client js and geonamesUsername is from .env file */
 
 
