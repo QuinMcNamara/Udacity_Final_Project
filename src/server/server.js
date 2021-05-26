@@ -38,7 +38,7 @@ app.post('/postLocation', (req, res) => {
     res.send(allData);
 });
 
-app.post('postForecastWeather', (req, res) => {
+app.post('/postForecastWeather', (req, res) => {
     console.log(req);
     allData.forecast_high = req.body.forecast_high;
     allData.forecast_low = req.body.forecast_low;
@@ -47,7 +47,7 @@ app.post('postForecastWeather', (req, res) => {
     res.send(allData);
 });
 
-app.post('postHistoricalWeather', (req, res) => {
+app.post('/postHistoricalWeather', (req, res) => {
     console.log(req);
     allData.historical_high = req.body.historical_high;
     allData.historical_low = req.body.historical_low;
