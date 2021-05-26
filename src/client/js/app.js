@@ -1,5 +1,9 @@
 /* Global Variables */
 
+// Current Date
+let date = new Date();
+let currentDate = (date.getMonth()+1)+'-'+date.getDate+'-'+date.getFullYear();
+
 //GeoNames Variables
 const geonamesUsername = process.env.geonames_username;
 const geonamesBaseURL = 'http://api.geonames.org/searchJSON?q=';
@@ -23,3 +27,5 @@ const pixabayBaseURL = 'https://pixabay.com/api/?key=';
 'https://pixabay.com/api/?key="pixabayApiKey"&q="user input city here"&image_type=photo&category=places'
 Note - User input city string must be encoded - see following:
 [https://love2dev.com/blog/whats-the-difference-between-encodeuri-and-encodeuricomponent/] */
+
+async 
