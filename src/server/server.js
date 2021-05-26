@@ -24,6 +24,44 @@ app.use(express.json());
 // Enable all CORS Requests
 app.use(cors());
 
+// Get Routes
+app.get('/all', (req, res) => {
+    console.log(allData);
+    res.send(allData);
+});
+
+// POST Routes
+app.post('/postLocation', (req, res) => {
+    console.log(req);
+    allData.city = req.body.city;
+    console.log(res);
+    res.send(allData);
+});
+
+app.post('postForecastWeather', (req, res) => {
+    console.log(req);
+    allData.forecast_high = req.body.forecast_high;
+    allData.forecast_low = req.body.forecast_low;
+    allData.description = req.body.description;
+    console.log(res);
+    res.send(allData);
+});
+
+app.post('postHistoricalWeather', (req, res) => {
+    console.log(req);
+    allData.historical_high = req.body.historical_high;
+    allData.historical_low = req.body.historical_low;
+    console.log(res);
+    res.send(allData);
+})
+
+app.post('/pixabayPic', (req, res) => {
+    console.log(req);
+    allData.pic = req.body.pic;
+    console.log(res);
+    res.send(allData);
+})
+
 
 // Designates what port the app will listen to for incoming requests
 const port = 3031;
