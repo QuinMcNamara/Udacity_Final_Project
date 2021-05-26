@@ -1,3 +1,5 @@
+/* Global Variables */
+
 //GeoNames Variables
 const geonamesUsername = process.env.geonames_username;
 const geonamesBaseURL = 'http://api.geonames.org/searchJSON?q=';
