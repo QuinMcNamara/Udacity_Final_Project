@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 /* Global Variables */
 // Global Data Endpoint
 globalData = {};
