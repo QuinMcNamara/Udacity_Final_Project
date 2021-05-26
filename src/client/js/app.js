@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 /* Global Variables */
 // Global Data Endpoint
 globalData = {};
@@ -41,4 +44,13 @@ const retrieveCoordinates = async(baseURL, city, userName) => {
     catch(error) {console.log(error);}
 };
 
-document.getElementById('generate').addEventListener('click', retrieveCoordinates)
+document.getElementById('generate').addEventListener('click', () => {
+    userCity = document.getElementById('destination').value;
+    retrieveCoordinates(geonamesBaseURL, userCity, geonamesUsername)
+    .then(coordData => {
+        globalData.latitude = coordData.geonames[0].lat;
+        globalData.longitude = coordData.geonames[0].long;
+        console.log(globalData);
+    })
+    .catch(error => console.log(error));
+});
