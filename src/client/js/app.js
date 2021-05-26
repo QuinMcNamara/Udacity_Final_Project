@@ -10,9 +10,11 @@ User Input City will be pulled from client js and geonamesUsername is from .env 
 
 //WeatherBit Variables
 const weatherbitApiKey = process.env.weatherbit_api_key;
-const weatherbitBaseURL = 'https://api.weatherbit.io/v2.0/forecast/daily?lat=';
+const weatherbitForecastBaseURL = 'https://api.weatherbit.io/v2.0/forecast/daily?lat=';
 /* For reference, the full URL needed is as follows:
 'https://api.weatherbit.io/v2.0/forecast/daily?lat="latitude entry"&lon="longitude entry"&key="weatherbitApiKey"' */
+const weatherbitHistoricalBaseURL = 'PLACEHOLDER';
+
 
 //PixaBay Variables
 const pixabayApiKey = process.env.pixabay_api_key;
