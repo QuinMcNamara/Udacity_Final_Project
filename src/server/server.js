@@ -25,6 +25,10 @@ app.use(express.json());
 app.use(cors());
 
 // Get Routes
+app.get('/', (req, res) => {
+    res.sendFile('dist/index.html')
+});
+
 app.get('/all', (req, res) => {
     console.log(allData);
     res.send(allData);
