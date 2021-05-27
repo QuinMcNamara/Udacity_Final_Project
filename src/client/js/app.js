@@ -33,7 +33,7 @@ Note - User input city string must be encoded - see following:
 // Function to Get GeoNames API Data
 const retrieveCoordinates = async(baseURL, city, userName) => {
     // const response = await fetch(`${baseURL}${city}&maxRows=2&username=${userName}`)
-    const response = await fetch(`${baseURL}${city}&maxRows=2&username=*******`)
+    const response = await fetch(`${baseURL}${city}&maxRows=2&username=quin_mac`)
     try {
         const coordData = await response.json();
         console.log(coordData);
