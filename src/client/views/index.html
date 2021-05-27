@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +7,60 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Travel Planner</title>
 </head>
 <body>
-<nav>
-    <div class="nav headline">
-        <h1>Travel Planner</h1>
-    </div>
-    <div class="nav sub_headline" >
-        <h2>Peace Be to Journey</h2>
-    </div>
-</nav>
-<div class="app">
-    <div class="holder destination">
-        <label for="destination">Where are you headed?</label>
-        <input type="text" id="destination" placeholder="Please Enter Destination">
-    </div>
-    <div class="holder departing">
-        <label for="departure_date">When are you leaving?</label>
-        <input type="text" id="departure_date" placeholder="Please Enter Departure Date">
-        <button id="generate" type="submit"> Generate </button>
-    </div>
-    <div class="holder current">
-        <div class="current_title">
-            <h3>Current Trip</h3>
+    <nav>
+        <div class="nav headline">
+            <h1>Travel Planner</h1>
         </div>
-        <div class="current_trip_info">
-            <div id="trip_destination"></div>
-            <div id="trip_date"></div>
-            <div id="trip_temp"></div>
-            <div id="trip_forecast"></div>
+        <div class="nav sub_headline" >
+            <h2>Peace Be to Journey</h2>
+        </div>
+    </nav>
+
+    <div class="app">
+        <div class="holder destination">
+            <label for="destination">Where are you headed?</label>
+            <input type="text" id="destination" placeholder="Please Enter Destination">
+        </div>
+        <div class="holder departing">
+            <label for="departure_date">When are you leaving?</label>
+            <input type="text" id="departure_date" placeholder="Please Enter Departure Date">
+            <button id="generate" type="submit"> Generate </button>
+        </div>
+        <div class="holder current">
+            <div class="current_title">
+                <h3>Current Trip</h3>
+            </div>
+            <div class="current_trip_info">
+                <div id="trip_destination"></div>
+                <div id="trip_date"></div>
+                <div id="trip_temp"></div>
+                <div id="trip_forecast"></div>
+            </div>
         </div>
     </div>
-</div>
-<footer>
-    <div class="copyright">© 2021 | Quin McNamara</div>
-    <div class="social">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-pinterest"></a>
-    </div>
-</footer>
-<script src="../js/app.js" type="text/javascript"></script>
+    
+    <footer>
+        <div class="copyright">© 2021 | Quin McNamara</div>
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+        </div>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 
 </body>
 </html>
