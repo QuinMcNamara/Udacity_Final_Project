@@ -41,8 +41,10 @@ const retrieveCoordinates = async(baseURL, city, userName) => {
     }
     catch(error) {console.log(error);}
 };
+ 
 
-document.getElementById('generate').addEventListener('click', () => {
+function clickHandler(event) {
+    event.preventDefault;
     userCity = document.getElementById('destination').value;
     retrieveCoordinates(geonamesBaseURL, userCity, geonamesUsername)
     .then(coordData => {
@@ -51,4 +53,9 @@ document.getElementById('generate').addEventListener('click', () => {
         console.log(globalData);
     })
     .catch(error => console.log(error));
-});
+};
+
+export {
+    clickHandler,
+    retrieveCoordinates
+}
