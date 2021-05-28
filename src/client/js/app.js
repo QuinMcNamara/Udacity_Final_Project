@@ -1,10 +1,25 @@
-/* Global Variables */
-// Global Data Endpoint
-globalData = {};
+// Countdown and Date Function
+function setDateCountdown (departureDate) {
+	let currentDate = new Date();
+	let departDate = new Date(departureDate);
+	let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	let newDate = (currentDate.getDate() +'.'+ (months[currentDate.getMonth()]) +'.'+ currentDate.getFullYear());
+	console.log(currentDate);
+	console.log(departDate);
+	console.log(newDate);
 
-// Current Date
-let date = new Date();
-let currentDate = (date.getMonth()+1)+'-'+date.getDate+'-'+date.getFullYear();
+	/* Calculate number of says until trip, as seen here:
+	https://www.geeksforgeeks.org/
+	how-to-calculate-the-number-of-days-between-two-dates-in-javascript/
+	*/
+	diffInTime = departDate.getTime() - currentDate.getTime();
+	diffInDays = Math.floor(diffInTime / (1000*3600*24));
+	console.log(diffInDays);
+
+	const countdown = [departDate, diffInDays];
+	console.log(countdown);
+	return countdown;
+}
 
 //GeoNames Variables
 // const geonamesUsername = process.env.geonames_username;
